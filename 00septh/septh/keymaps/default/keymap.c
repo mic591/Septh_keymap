@@ -25,35 +25,35 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_universal(
-   KC_LGUI  , KC_1      , KC_2      , KC_3         , KC_4        , KC_5       ,KC_BTN3,                       KC_6     , KC_7     , KC_8     , KC_9     , KC_0     , KC_MINS  ,KC_DEL,
-   KC_TAB   , KC_Q      , KC_W      , KC_E         , KC_R        , KC_T       ,TO(2),                       KC_Y     , KC_U     , KC_I     , KC_O     , KC_P     , KC_INT3  ,KC_ENTER,
-   KC_LSFT  , KC_A      , KC_S      , KC_D         , KC_F        , KC_G       ,                             KC_H     , KC_J     , KC_K     , KC_L     , KC_SCLN  , S(KC_7)  ,KC_ENTER,
-   KC_LCTL  , KC_Z      , KC_X      , KC_C         , KC_V        , KC_B       ,                    KC_BTN1, KC_N     , KC_M     , KC_COMM  , KC_DOT   , KC_SLSH  , KC_RSFT  ,KC_RSFT,
-   KC_ESC   , KC_SPC   , KC_ENTER   ,LT(1,KC_LNG1),LT(1,KC_LNG2),LT(2,KC_LCTL),  _______  ,                 KC_BTN2, KC_BTN3  , KC_BTN4,LT(1,KC_ENT), KC_BSPC  , KC_DEL   ,LT(2,KC_LNG2),_______ 
+   KC_LGUI  , KC_1      , KC_2      , KC_3         , KC_4        , KC_5       , TO(0)    ,                  KC_6     , KC_7     , KC_8       , KC_9     , KC_0     , KC_MINS  ,KC_DEL   ,
+   KC_TAB   , KC_Q      , KC_W      , KC_E         , KC_R        , KC_T       , TO(2)    ,                  KC_Y     , KC_U     , KC_I       , KC_O     , KC_P     , KC_INT3  ,KC_ENTER ,
+   KC_LSFT  , KC_A      , KC_S      , KC_D         , KC_F        , KC_G       ,                             KC_H     ,LT(2,KC_J), KC_K       , KC_L     , KC_P     , KC_ENTER ,KC_ENTER ,
+   KC_LCTL  , KC_Z      , KC_X      , KC_C         , KC_V        , KC_B       ,                  KC_BTN1  , KC_N     , KC_M     , KC_COMM    , KC_DOT   , KC_SLSH  , KC_RSFT  ,KC_RSFT  ,
+   KC_ESC   , KC_SPC    , KC_ENTER  ,LT(1,KC_LNG1),LT(1,KC_LNG2),LT(2,KC_LCTL),TO(0),            KC_BTN2  , KC_BTN3  , _______  ,LT(1,KC_ENT), KC_BSPC  , KC_DEL   , MO(2)    ,MO(3) 
   ),
 
   [1] = LAYOUT_universal(
-    _______  , S(KC_1)  , KC_LBRC  , S(KC_3)  , S(KC_4)  , S(KC_5)  , _______  ,                    KC_EQL   , S(KC_6)  ,S(KC_QUOT), S(KC_8)  , S(KC_9)  ,S(KC_INT1),_______  ,
-    _______  , S(KC_Q)  , S(KC_W)  , S(KC_E)  , S(KC_R)  , S(KC_T)  , _______  ,                    S(KC_Y)  , S(KC_U)  , S(KC_I)  , S(KC_O)  , S(KC_P)  ,S(KC_INT3),_______  ,
-    _______  , S(KC_A)  , S(KC_S)  , S(KC_D)  , S(KC_F)  , S(KC_G)  ,                               S(KC_H)  , S(KC_J)  , S(KC_K)  , S(KC_L)  , KC_QUOT  , S(KC_2)  ,_______  ,
-    _______  , S(KC_Z)  , S(KC_X)  , S(KC_C)  , S(KC_V)  , S(KC_B)  ,                    _______  , S(KC_N)  , S(KC_M)  ,S(KC_COMM), S(KC_DOT),S(KC_SLSH),S(KC_RSFT),_______  ,
-    _______  , _______  , _______  , _______  , _______  , _______  ,  _______  ,                    _______  , _______  , _______  , _______  , _______  , _______  , _______  ,_______  
+    _______ , S(KC_SLSH), S(KC_BSLS), KC_PSCR      , KC_INT3     , S(KC_5)    , _______  ,                  KC_EQL   , S(KC_6)  ,S(KC_QUOT)  , S(KC_8)  , S(KC_9)  ,S(KC_INT1),_______  ,
+    _______ , S(KC_1)   , S(KC_2)   , S(KC_3)      , S(KC_4)     , S(KC_5)    , _______  ,                  S(KC_Y)  , S(KC_6)  , S(KC_7)    , S(KC_8)  , S(KC_9)  ,S(KC_INT3),_______  ,
+    _______ , KC_LBRC   , KC_RGHT   , KC_UP        , KC_LEFT     , KC_SLSH    ,                             S(KC_H)  , S(KC_J)  , S(KC_K)    , S(KC_L)  , KC_QUOT  , S(KC_2)  ,_______  ,
+    _______ , S(KC_Z)   , KC_BTN2   , KC_DOWN      , KC_DEL      , KC_BSPC    ,                  _______  , S(KC_N)  , S(KC_M)  ,S(KC_COMM)  , S(KC_DOT),S(KC_SLSH),S(KC_RSFT),_______  ,
+    _______ , _______   , _______   , _______      , _______     , _______    , _______  ,       _______  , _______  , _______  , _______    , _______  , _______  , _______  ,_______  
   ),
 
   [2] = LAYOUT_universal(
-    _______  , S(KC_6)  , KC_F2    , KC_F3    , KC_F4    , KC_PMNS  ,  _______  ,                    KC_F6    , KC_F7    , KC_F8    , KC_F9    , KC_F10   , KC_F11   ,_______  ,
-    _______  , KC_PSLS  , KC_7     , KC_8     , KC_9     , KC_PPLS  ,  _______  ,                    _______  , KC_BTN1  , _______  , KC_BTN2  , KC_BTN3  , KC_F12   ,_______  ,
-    _______  , KC_PAST  , KC_4     , KC_5     , KC_6     , KC_PEQL  ,                               KC_PGUP  , KC_LEFT  , KC_UP    , KC_RGHT  , _______  , _______  ,_______  ,
-    _______  , KC_DOT   , KC_1     , KC_2     , KC_3     , KC_0     ,                      _______ , KC_PGDN  , _______  , KC_DOWN  , _______  , _______  , _______  ,_______  ,
-    _______  , _______  , _______  , _______  , _______  , _______  ,   _______  ,                    _______  , _______  , _______  , _______  , _______  , _______  , _______  ,_______  
+    _______  , S(KC_6)  , KC_F2     , KC_F3        , KC_F4       , KC_PMNS    , _______  ,                  KC_F6    , KC_F7    , KC_F8      , KC_F9    , KC_F10   , KC_F11   ,_______  ,
+    _______  , KC_PSLS  , KC_7      , KC_8         , KC_9        , KC_PEQL    , _______  ,                  KC_PPLS  , KC_PMNS  , _______    , KC_INT3  , KC_QUOT  , KC_F12   ,_______  ,
+    _______  , KC_PAST  , KC_4      , KC_5         , KC_6        , KC_DOT     ,                             KC_PAST  , KC_PSLS  , KC_UP      , KC_RGHT  , KC_SCLN  , S(KC_2)  ,_______  ,
+    _______  , KC_PPLS  , KC_1      , KC_2         , KC_3        , KC_0       ,                  _______  , _______  , KC_RGHT  , S(KC_8)    , S(KC_9)  , _______  , _______  ,_______  ,
+    _______  , _______  , _______   , _______      , _______     , _______    , _______  ,       _______  , _______  , _______  , _______    , _______  , _______  , _______  ,_______  
   ),
 
   [3] = LAYOUT_universal(
-    _______  , _______  , _______  , _______  , _______  , _______  ,  _______  ,                    _______  , _______  , _______  , _______  , _______  , _______  , _______  ,
-    _______  , _______  , _______  , _______  , _______  , _______  ,  _______  ,                    _______  , _______  , _______  , _______  , _______  , _______  , _______  ,
-    _______  , _______  , _______  , _______  , _______  , _______  ,                                _______  , _______  , _______  , _______  , _______  , _______  , _______  ,
-    _______  , _______  , _______  , _______  , _______  , _______  ,                     _______  , _______  , _______  , _______  , _______  , _______  , _______  , _______  ,
-    _______  , _______  , _______  , _______  , _______  , _______  ,  _______  ,                     _______  , _______  , _______  , _______  , _______  , _______  , _______  , _______ 
+    _______  , _______  , _______   , _______      , _______     , _______    , _______  ,                  _______  , _______  , _______    , _______  , _______  , _______  , _______  ,
+    _______  , _______  , _______   , C(KC_I)      , C(KC_O)     , C(KC_P)    , _______  ,                  _______  , _______  , _______    , _______  , _______  , _______  , _______  ,
+    _______  , _______  , _______   , _______      , C(KC_H)     , C(KC_L)    ,                             _______  , _______  , _______    , _______  , _______  , _______  , _______  ,
+    _______  , _______  , _______   , _______      , C(KC_N)     , C(KC_M)    ,                  _______  , _______  , _______  , _______    , _______  , _______  , _______  , _______  ,
+    _______  , _______  , _______   , _______      , _______     , _______    , _______  ,       _______  , _______  , _______  , _______    , _______  , _______  , _______  , _______ 
   )
 };
 // clang-format on
